@@ -5,10 +5,10 @@ on:
     branches: 
       - newifi3
   #     ↑↑↑ 改成你的分支名, 一般是master
-  # schedule:
-  #   - cron: 0 20 * * *
-  # release:
-  #   types: [published]
+  schedule:
+    - cron: 0 20 * * *
+  release:
+    types: [published]
 
 jobs:
   build:
