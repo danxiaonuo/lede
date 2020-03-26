@@ -1,14 +1,23 @@
-name: OpenWrt-Newifi3
+#
+# This is free software, lisence use MIT.
+# 
+# Copyright (C) 2019 P3TERX <https://p3terx.com>
+# Copyright (C) 2019 KFERMercer <KFER.Mercer@gmail.com>
+# 
+# <https://github.com/KFERMercer/OpenWrt-CI>
+#
+
+name: OpenWrt-CI
 
 on:
   push:
     branches: 
-      - newifi3
+      - master
   #     ↑↑↑ 改成你的分支名, 一般是master
-  schedule:
-    - cron: 0 20 * * *
-  release:
-    types: [published]
+  # schedule:
+  #   - cron: 0 20 * * *
+  # release:
+  #   types: [published]
 
 jobs:
   build:
@@ -16,11 +25,11 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: danxiaonuo
+        uses: actions/checkout@master
         with:
-          ref: newifi3
+          ref: master
         #      ↑↑↑ 改成你的分支名, 一般是master
-
+          
       - name: Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
