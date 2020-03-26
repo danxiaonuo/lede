@@ -106,10 +106,6 @@ jobs:
           CONFIG_TARGET_ramips=y
           CONFIG_TARGET_ramips_mt7621=y
           CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
-          CONFIG_boost-compile-visibility-hidden=y
-          CONFIG_boost-runtime-shared=y
-          CONFIG_boost-static-and-shared-libs=y
-          CONFIG_boost-variant-release=y
           EOF
 
           # 固件压缩:
