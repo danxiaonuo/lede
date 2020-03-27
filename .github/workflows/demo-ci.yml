@@ -7,11 +7,11 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: hiwifi-CI
+name: demo-CI
 
 on:
-  schedule:
-      - cron: 0 20 * * *
+#  schedule:
+#      - cron: 0 20 * * *
   push:
     branches: 
       - master
@@ -101,9 +101,9 @@ jobs:
 
           # 编译x64固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_ramips=y
-          CONFIG_TARGET_ramips_mt7621=y
-          CONFIG_TARGET_ramips_mt7621_DEVICE_hiwifi_hc5962=y
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_Generic=y
           EOF
 
           # 固件压缩:
